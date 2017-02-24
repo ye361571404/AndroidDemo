@@ -1,0 +1,42 @@
+
+
+1.This Activity already has an action bar supplied by the window decor.
+  Do not request Window.FEATURE_SUPPORT_ACTION_BAR and set windowActionBar to false in your theme to use a Toolbar instead.
+
+    原因:
+        因为继承的AppCompatActivity类已经存在一个action bar
+
+    解:
+
+        使用以下主题
+        <!-- Base application theme. -->
+        <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+            <!-- Customize your theme here. -->
+            <item name="colorPrimary">@color/colorPrimary</item>
+            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+            <item name="colorAccent">@color/colorAccent</item>
+        </style>
+
+        <style name="NoActionBar" parent="AppTheme">
+            <!-- 去除原有action bar -->
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+        </style>
+
+
+
+
+2.  Toolbar 在5.0上和状态栏重叠
+
+        解:把CoordinatorLayout android:fitsSystemWindows="true"去掉
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AndroidDemo</string>
+    
+    
+    
+    <string-array name="features">
+        <item>01 RecyclerView 实现下拉刷新上拉加载</item>
+    </string-array>
+    
 </resources>

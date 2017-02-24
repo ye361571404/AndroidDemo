@@ -1,11 +1,11 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'     // 说明该程序时主modle
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "hua.demo"
-        minSdkVersion 15
+        minSdkVersion 15            // 编译版本
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -13,14 +13,14 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled false     // true 使用混淆    false 不使用混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])       // 加载libs目录下的库文件
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

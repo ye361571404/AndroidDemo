@@ -21,3 +21,10 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+subprojects{
+    // 该语句让项目中的所有modle都能使用该文件中定义的变量值
+    apply from: "${project.rootDir}/common_config.gradle"
+
+}

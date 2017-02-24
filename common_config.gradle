@@ -1,0 +1,39 @@
+
+
+project.ext {
+
+    // java语言相关
+    javaVersion = 8
+    javaMaxHeapSize = '4G'
+
+    // Android编译版本相关
+    compileSdkVersion = 23
+    buildToolsVersion = "23.0.3"
+    minSdkVersion = 11
+    targetSdkVersion = 23
+
+    // 混淆相关
+    minfyEnable = true
+    shrinkResEnable = minfyEnable
+
+    // JDK版本兼容
+    sourceCompatibility = this.&getJavaVersion()
+    targetCompatbility = this.&getJavaVersion()
+
+}
+
+def getJavaVersion(){
+
+    switch(project.ext.javaVersion){
+        case "6":
+            return JavaVersion.VERSION_1_6
+        case "7":
+            return JavaVersion.VERSION_1_7
+        case "8":
+            return JavaVersion.VERSION_1_8
+        default:
+            return JavaVersion.VERSION_1_6
+    }
+
+
+}

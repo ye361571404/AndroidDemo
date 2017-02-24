@@ -29,6 +29,7 @@ public class XRecyclerView extends RecyclerView {
     private ArrayList<View> mHeaderViews = new ArrayList<>();
     private WrapAdapter mWrapAdapter;
     private float mLastY = -1;
+    /** 控制下拉系数 数值越小 越容易执行下拉刷新操作 **/
     private static final float DRAG_RATE = 3;
     private LoadingListener mLoadingListener;
     private ArrowRefreshHeader mRefreshHeader;

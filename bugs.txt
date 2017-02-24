@@ -31,6 +31,12 @@
         解:把CoordinatorLayout android:fitsSystemWindows="true"去掉
 
 
+3.  在另一处down下代码后发生 Error:Configuration with name 'default' not found. 错误
+
+        原因:之前依赖库没有上传完整
+
+        解:将依赖库上传完整,然后将上传后的依赖库down下来
+
 
 
 

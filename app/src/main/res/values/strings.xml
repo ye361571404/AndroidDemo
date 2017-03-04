@@ -5,6 +5,7 @@
     
     <string-array name="features">
         <item>01 RecyclerView 实现下拉刷新上拉加载</item>
+        <item>02 ImageView</item>
     </string-array>
-    
+
 </resources>

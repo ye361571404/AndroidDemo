@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        LinearLayout中添加分割线
+
+        1、Android:divider="@drawable"
+
+                drawable可以是图片文件，也可以是xml绘制的shape
+
+        2、android:showDividers = "middle|end|beginning|none"
+
+                middle 在每一项中间添加分割线
+                end 在整体的最后一项添加分割线
+                beginning 在整体的最上方添加分割线
+                none 无
+
+
+        添加上这两个属性就可以实现图中效果。
+        但是，这种属性只有Android3.0以上才支持。
+        兼容3.0以下版本，需要引用android-support-v7-appcompat.jar
+        使用android.support.v7.widget.LinearLayoutCompat，用法和LinearLayout一样。但是再设置属性的时候需要使用设置xml命名空间
+        比如xmlns:app="http://schemas.android.com/apk/res-auto" app:divider=""
+    -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:divider="@drawable/shape_line"
+        android:showDividers="beginning|end"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_margin="10dp"
+            android:background="@drawable/icon_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</ScrollView>

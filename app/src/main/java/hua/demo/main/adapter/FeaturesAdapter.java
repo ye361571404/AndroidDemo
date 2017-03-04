@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hua.demo.R;
+import hua.demo.common.ConstantItemEnum;
 
 /**
  * Created by Administrator on 2017/2/24.
@@ -17,9 +18,9 @@ public class FeaturesAdapter extends RecyclerView.Adapter<FeaturesAdapter.ViewHo
 
 
     private View.OnClickListener onClickListener;
-    private List<String> items;
+    private List<ConstantItemEnum> items;
 
-    public FeaturesAdapter(View.OnClickListener onClickListener, List<String> items) {
+    public FeaturesAdapter(View.OnClickListener onClickListener, List<ConstantItemEnum> items) {
         this.onClickListener = onClickListener;
         if (items == null) {
             items = new ArrayList<>();
@@ -35,8 +36,9 @@ public class FeaturesAdapter extends RecyclerView.Adapter<FeaturesAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String s = items.get(position);
-        holder.mItem.setText(s);
+        ConstantItemEnum itemEnum = items.get(position);
+        holder.mItem.setTag(itemEnum);
+        holder.mItem.setText(itemEnum.getItemName());
         holder.mItem.setOnClickListener(onClickListener);
     }
 

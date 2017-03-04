@@ -22,6 +22,11 @@
             android:name=".feature.recyclerview.activity.RecyclerViewActivity"
             android:theme="@style/NoActionBar"/>
 
+        <!-- 2.ImageView -->
+        <activity
+            android:name=".feature.imageview.activity.ImageViewActivity"
+            android:theme="@style/NoActionBar"/>
+
     </application>
 
 </manifest>

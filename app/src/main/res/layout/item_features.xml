@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tv_item"
-    android:textSize="18sp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:minHeight="30dp">
+    android:layout_height="wrap_content">
 
-</TextView>
+    <!-- @style/AppTheme.Button.Green 在列表控件中item的该样式设置的高和宽只有在有父布局的情况下才会起作用-->
+    <TextView
+        style="@style/AppTheme.Button.Green"
+        android:id="@+id/tv_item">
+
+    </TextView>
+
+</RelativeLayout>

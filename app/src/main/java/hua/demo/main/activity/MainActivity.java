@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import hua.demo.R;
+import hua.demo.common.ConstantItemEnum;
 import hua.demo.feature.recyclerview.activity.RecyclerViewActivity;
 import hua.demo.main.adapter.FeaturesAdapter;
 
@@ -36,10 +37,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void initData() {
-        List<String> items = new ArrayList<>();
-        String[] features = getResources().getStringArray(R.array.features);
-        items = Arrays.asList(features);
-        mRecyclerview.setAdapter(new FeaturesAdapter(this,items));
+        List<ConstantItemEnum> itemEnumList = Arrays.asList(ConstantItemEnum.values());
+        mRecyclerview.setAdapter(new FeaturesAdapter(this,itemEnumList));
         mRecyclerview.setLayoutManager(new LinearLayoutManager(this));
     }
 
@@ -49,7 +48,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         switch(v.getId()){
             case R.id.tv_item:
-                startActivity(new Intent(this, RecyclerViewActivity.class));
+                ConstantItemEnum itemEnum = (ConstantItemEnum) v.getTag();
+                startActivity(new Intent(this, itemEnum.getClazz()));
                 break;
         }
     }

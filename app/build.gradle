@@ -29,6 +29,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.4.0'
     testCompile 'junit:junit:4.12'
     compile project(':xrecyclerview')
-    // 添加Android ButterKnife Zelezny 配合使用
+    // 添加Android ButterKnife Zelezny 配合使用 光标在布局引用处使用快捷键 Alt + Insert
     compile 'com.jakewharton:butterknife:7.0.1'
 }

@@ -1,8 +1,9 @@
 package hua.demo.feature.customview.activity;
 
 import android.view.View;
-import android.widget.Button;
 
+import butterknife.Bind;
+import butterknife.OnClick;
 import hua.demo.R;
 import hua.demo.feature.customview.view.CustomProgress;
 import hua.demo.main.activity.BaseActivity;
@@ -11,14 +12,14 @@ import hua.demo.main.activity.BaseActivity;
  * Created by Administrator on 2017/3/4.
  */
 
-public class CustomViewActivity extends BaseActivity implements View.OnClickListener {
+public class CustomViewActivity extends BaseActivity {
 
 
-    private CustomProgress mCustomProgress;
-
-    private int max = 100;
+    @Bind(R.id.cp_progress)
+    CustomProgress mCustomProgress;
+    private int max = 200;
     private int progress;
-    private Button mBtnStart;
+
 
     @Override
     protected int getLayoutRes() {
@@ -27,13 +28,10 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
 
     @Override
     protected void assignViews() {
-        mCustomProgress = (CustomProgress) findViewById(R.id.cp_progress);
-        mBtnStart = (Button) findViewById(R.id.btn_start);
     }
 
     @Override
     protected void setListener() {
-        mBtnStart.setOnClickListener(this);
     }
 
     @Override
@@ -44,21 +42,22 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
     }
 
 
-    @Override
-    public void onClick(View v) {
-        switch(v.getId()){
+    @OnClick({R.id.btn_start})
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.btn_start:
                 start();
                 break;
         }
     }
 
-    private void start() {
+
+    public void start() {
         progress = 0;
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while(true){
+                while (true) {
                     mCustomProgress.setProgressAndText(progress, progress + "%");
                     progress++;
                     try {
@@ -66,11 +65,13 @@ public class CustomViewActivity extends BaseActivity implements View.OnClickList
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    if(progress > 100){
+                    if (progress > max) {
                         break;
                     }
                 }
             }
         }).start();
     }
+
+
 }

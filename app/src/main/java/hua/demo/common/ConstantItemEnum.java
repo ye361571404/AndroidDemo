@@ -2,6 +2,7 @@ package hua.demo.common;
 
 import hua.demo.feature.customview.activity.CustomViewActivity;
 import hua.demo.feature.imageview.activity.ImageViewActivity;
+import hua.demo.feature.player.activity.MusicPlayerActivity;
 import hua.demo.feature.recyclerview.activity.RecyclerViewActivity;
 
 /**
@@ -13,7 +14,8 @@ public enum ConstantItemEnum {
 
     RECYCLER_VIEW("01 RecyclerView 实现下拉刷新上拉加载",RecyclerViewActivity.class),
     IMAGE_VIEW("02 ImageView",ImageViewActivity.class),
-    CUSTOM_VIEW("03 自定义view",CustomViewActivity.class);
+    CUSTOM_VIEW("03 自定义view",CustomViewActivity.class),
+    MUSIC_PLAYER("04 音乐播放器",MusicPlayerActivity.class);
 
     private int itemType;
 

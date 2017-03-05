@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_list"
+        android:layout_above="@+id/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+    <!-- 播放进度条 start -->
+    <LinearLayout
+        android:id="@+id/layout_progress"
+        android:layout_above="@+id/layout_play_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="44dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/text_view_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorAccent"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:text="00:00"
+            />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar"
+            style="@style/Widget.AppCompat.SeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="10000"
+            />
+
+        <TextView
+            android:id="@+id/text_view_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorAccent"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:text="00:00"
+            />
+    </LinearLayout>
+    <!-- 播放进度条 end -->
+
+
+
+    <!-- 播放控制 start -->
+    <LinearLayout
+        android:id="@+id/layout_play_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:showDividers="middle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:divider="@drawable/common_divider_xlarge_horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/button_play_mode_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_mode_shuffle"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/button_play_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_last"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/button_play_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/button_play_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_next"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/button_favorite_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/ic_favorite_no"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+    </LinearLayout>
+    <!-- 播放控制 end -->
+
+
+</RelativeLayout>

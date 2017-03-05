@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hua.demo">
 
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
+        android:name=".common.HuaApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,6 +35,19 @@
         <activity
             android:name=".feature.customview.activity.CustomViewActivity"
             android:theme="@style/NoActionBar" />
+
+        <!-- 4.音乐播放器 -->
+        <activity
+            android:name=".feature.player.activity.MusicPlayerActivity" />
+
+        <service android:name=".feature.player.player.PlaybackService">
+            <intent-filter>
+                <action android:name="hua.demo.ACTION.PLAY_TOGGLE"/>
+                <action android:name="hua.demo.ACTION.PLAY_NEXT"/>
+                <action android:name="hua.demo.ACTION.PLAY_LAST"/>
+                <action android:name="hua.demo.ACTION.STOP_SERVICE"/>
+            </intent-filter>
+        </service>
 
     </application>
 

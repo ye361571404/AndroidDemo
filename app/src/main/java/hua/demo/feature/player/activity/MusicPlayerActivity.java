@@ -405,6 +405,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
     protected void onDestroy() {
         mPresenter.unsubscribe();
         super.onDestroy();
+        ButterKnife.unbind(this);
     }
 
 
@@ -571,8 +572,6 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
         }
     }
 
-    public void test(AudioDecorator<Song> s){
 
-    }
 
 }

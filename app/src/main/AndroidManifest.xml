@@ -27,6 +27,11 @@
             android:name=".feature.imageview.activity.ImageViewActivity"
             android:theme="@style/NoActionBar"/>
 
+        <!-- 3.自定义view -->
+        <activity
+            android:name=".feature.customview.activity.CustomViewActivity"
+            android:theme="@style/NoActionBar" />
+
     </application>
 
 </manifest>

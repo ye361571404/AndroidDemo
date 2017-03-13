@@ -46,7 +46,16 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".feature.rxjava.RxJavaDemoActivity"></activity>
+        <!-- 5.RxJava架构思想小demo -->
+        <activity android:name=".feature.rxjava.RxJavaDemoActivity" />
+
+        <!-- 6.Activity启动模式 -->
+        <activity android:name=".feature.launchmode.activity.LaunchModeActivity" />
+        <activity android:name=".feature.launchmode.activity.FirstActivity" />
+        <activity android:name=".feature.launchmode.activity.SecondActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".feature.launchmode.activity.ThirdActivity"></activity>
+
     </application>
 
 </manifest>

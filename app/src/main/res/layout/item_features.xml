@@ -8,7 +8,6 @@
     <TextView
         style="@style/AppTheme.Button.Green"
         android:id="@+id/tv_item">
-
     </TextView>
 
 </RelativeLayout>

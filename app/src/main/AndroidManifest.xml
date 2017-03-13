@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hua.demo">
 
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".common.HuaApplication"
@@ -12,7 +11,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        
         <activity android:name=".main.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,12 +22,12 @@
         <!-- 1.RecyclerView 下拉刷新上拉加载 -->
         <activity
             android:name=".feature.recyclerview.activity.RecyclerViewActivity"
-            android:theme="@style/NoActionBar"/>
+            android:theme="@style/NoActionBar" />
 
         <!-- 2.ImageView -->
         <activity
             android:name=".feature.imageview.activity.ImageViewActivity"
-            android:theme="@style/NoActionBar"/>
+            android:theme="@style/NoActionBar" />
 
         <!-- 3.自定义view -->
         <activity
@@ -37,18 +35,18 @@
             android:theme="@style/NoActionBar" />
 
         <!-- 4.音乐播放器 -->
-        <activity
-            android:name=".feature.player.activity.MusicPlayerActivity" />
+        <activity android:name=".feature.player.activity.MusicPlayerActivity" />
 
         <service android:name=".feature.player.player.PlaybackService">
             <intent-filter>
-                <action android:name="hua.demo.ACTION.PLAY_TOGGLE"/>
-                <action android:name="hua.demo.ACTION.PLAY_NEXT"/>
-                <action android:name="hua.demo.ACTION.PLAY_LAST"/>
-                <action android:name="hua.demo.ACTION.STOP_SERVICE"/>
+                <action android:name="hua.demo.ACTION.PLAY_TOGGLE" />
+                <action android:name="hua.demo.ACTION.PLAY_NEXT" />
+                <action android:name="hua.demo.ACTION.PLAY_LAST" />
+                <action android:name="hua.demo.ACTION.STOP_SERVICE" />
             </intent-filter>
         </service>
 
+        <activity android:name=".feature.rxjava.RxJavaDemoActivity"></activity>
     </application>
 
 </manifest>

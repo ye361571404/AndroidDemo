@@ -31,5 +31,10 @@
         android:text="随手指移动的兔子"
         style="@style/AppTheme.Button.Green" />
 
+    <Button
+        android:id="@+id/btn_parallax_effects"
+        android:text="视差特效"
+        style="@style/AppTheme.Button.Green" />
+
 
 </LinearLayout>

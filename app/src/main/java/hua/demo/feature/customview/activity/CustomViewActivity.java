@@ -21,6 +21,8 @@ public class CustomViewActivity extends BaseActivity {
     CustomProgress mCustomProgress;
     @Bind(R.id.btn_rabbit)
     Button mBtnRabbit;
+    @Bind(R.id.btn_parallax_effects)
+    Button mBtnParallaxEffects;
 
     private int max = 200;
     private int progress;
@@ -47,7 +49,7 @@ public class CustomViewActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.btn_start,R.id.btn_rabbit})
+    @OnClick({R.id.btn_start,R.id.btn_rabbit,R.id.btn_parallax_effects})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_start:
@@ -56,7 +58,17 @@ public class CustomViewActivity extends BaseActivity {
             case R.id.btn_rabbit:
                 goToRabbit();
                 break;
+            case R.id.btn_parallax_effects:
+                parallaxEffects();
+                break;
         }
+    }
+
+    /**
+     * 视差特效
+     */
+    private void parallaxEffects() {
+        startActivity(new Intent(mContext,ParallaxEffectsActivity.class));
     }
 
     private void goToRabbit() {

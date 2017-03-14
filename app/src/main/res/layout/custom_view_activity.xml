@@ -24,7 +24,12 @@
     <Button
         android:id="@+id/btn_start"
         android:text="开始"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        style="@style/AppTheme.Button.Green" />
+
+    <Button
+        android:id="@+id/btn_rabbit"
+        android:text="随手指移动的兔子"
+        style="@style/AppTheme.Button.Green" />
+
 
 </LinearLayout>

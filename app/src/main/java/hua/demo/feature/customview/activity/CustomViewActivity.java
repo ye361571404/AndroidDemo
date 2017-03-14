@@ -1,6 +1,8 @@
 package hua.demo.feature.customview.activity;
 
+import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -17,6 +19,9 @@ public class CustomViewActivity extends BaseActivity {
 
     @Bind(R.id.cp_progress)
     CustomProgress mCustomProgress;
+    @Bind(R.id.btn_rabbit)
+    Button mBtnRabbit;
+
     private int max = 200;
     private int progress;
 
@@ -42,13 +47,20 @@ public class CustomViewActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.btn_start})
+    @OnClick({R.id.btn_start,R.id.btn_rabbit})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_start:
                 start();
                 break;
+            case R.id.btn_rabbit:
+                goToRabbit();
+                break;
         }
+    }
+
+    private void goToRabbit() {
+        startActivity(new Intent(mContext,RabbitActivity.class));
     }
 
 

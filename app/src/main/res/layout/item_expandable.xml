@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
+    <!-- 再嵌套一层才能实现控制margin和padding的效果-->
     <RelativeLayout
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"

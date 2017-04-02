@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- 再嵌套一层才能实现控制margin和padding的效果-->
     <RelativeLayout
         android:layout_marginBottom="10dp"
         android:padding="10dp"

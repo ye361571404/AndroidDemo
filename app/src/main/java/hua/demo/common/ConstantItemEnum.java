@@ -4,6 +4,7 @@ import hua.demo.feature.launchmode.activity.LaunchModeActivity;
 import hua.demo.feature.customview.activity.CustomViewActivity;
 import hua.demo.feature.imageview.activity.ImageViewActivity;
 import hua.demo.feature.player.activity.MusicPlayerActivity;
+import hua.demo.feature.recyclerview.activity.RecyclerExpandableActivity;
 import hua.demo.feature.recyclerview.activity.RecyclerViewActivity;
 import hua.demo.feature.rxjava.RxJavaDemoActivity;
 
@@ -15,6 +16,7 @@ public enum ConstantItemEnum {
 
 
     RECYCLER_VIEW("01 RecyclerView 实现下拉刷新上拉加载",RecyclerViewActivity.class),
+    RECYCLER_EXPANDABLE_VIEW("01 RecyclerView 实现可以展开收缩的item",RecyclerExpandableActivity.class),
     IMAGE_VIEW("02 ImageView",ImageViewActivity.class),
     CUSTOM_VIEW("03 自定义view",CustomViewActivity.class),
     MUSIC_PLAYER("04 音乐播放器",MusicPlayerActivity.class),

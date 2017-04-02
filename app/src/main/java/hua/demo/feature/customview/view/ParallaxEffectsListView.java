@@ -89,6 +89,13 @@ public class ParallaxEffectsListView extends ListView {
         return super.onTouchEvent(ev);
     }
 
+    /**
+     * 该方法copy IntEvaluator.java
+     * @param fraction
+     * @param startValue
+     * @param endValue
+     * @return
+     */
     public Integer evaluate(float fraction, Integer startValue, Integer endValue) {
         int startInt = startValue;
         return (int)(startInt + fraction * (endValue - startInt));

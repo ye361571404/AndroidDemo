@@ -36,5 +36,10 @@
         android:text="视差特效"
         style="@style/AppTheme.Button.Green" />
 
+    <Button
+        android:id="@+id/btn_recent_read"
+        android:text="最近阅读"
+        style="@style/AppTheme.Button.Green" />
+
 
 </LinearLayout>

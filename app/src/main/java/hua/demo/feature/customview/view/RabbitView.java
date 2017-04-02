@@ -41,6 +41,9 @@ public class RabbitView extends View {
     }
 
     private void init() {
+        // 处理该自定义控件写在布局里面时,onDraw()方法不执行
+        setWillNotDraw(false);
+
         bitmapX = 50; // 设置兔子的默认显示位置的X坐标
         bitmapY = 50; // 设置兔子的默认显示位置的Y坐标
     }

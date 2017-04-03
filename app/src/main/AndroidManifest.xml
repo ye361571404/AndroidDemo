@@ -61,7 +61,8 @@
             android:launchMode="singleInstance" />
         <activity android:name=".feature.launchmode.activity.ThirdActivity" />
         <activity android:name=".feature.customview.activity.RecentReadActivity" />
-        <activity android:name=".feature.recyclerview.activity.RecyclerExpandableActivity"></activity>
+        <activity android:name=".feature.recyclerview.activity.RecyclerExpandableActivity" />
+        <activity android:name=".feature.recyclerview.activity.SectionRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

@@ -1,5 +1,7 @@
 package hua.demo.feature.recyclerview.bean;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/4/2.
  */
@@ -10,10 +12,13 @@ public class GroupBean {
     private String groupName;
     /** 是否展开更多  true:是  false:否 **/
     private boolean isShowMore;
+    /** 组里面的元素 **/
+    private List<String> elements;
 
-    public GroupBean(boolean b, String s) {
+    public GroupBean(boolean b, String s, List<String> elements) {
         this.groupName = s;
         this.isShowMore = b;
+        this.elements = elements;
     }
 
     public String getGroupName() {
@@ -30,5 +35,13 @@ public class GroupBean {
 
     public void setShowMore(boolean showMore) {
         isShowMore = showMore;
+    }
+
+    public List<String> getElements() {
+        return elements;
+    }
+
+    public void setElements(List<String> elements) {
+        this.elements = elements;
     }
 }

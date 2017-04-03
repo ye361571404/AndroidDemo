@@ -5,26 +5,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import hua.demo.R;
+import hua.demo.common.HuaApplication;
 
 /**
  * Created by Administrator on 2017/4/2.
  */
-public class ExpandableAdapter extends RecyclerView.Adapter<ExpandableAdapter.ViewHolder> {
+public class ExpandableAdapter extends RecyclerView.Adapter<ExpandableAdapter.ViewHolder> implements View.OnClickListener {
 
 
-    private ArrayList<String> papers;
+    private List<String> elements;
     /** 是否展开更多 **/
     private boolean isShowMore;
 
-    public ExpandableAdapter(ArrayList<String> papers) {
-        if (papers == null) {
-            papers = new ArrayList<>();
+    public ExpandableAdapter(List<String> elements) {
+        if (elements == null) {
+            elements = new ArrayList<>();
         }
-        this.papers = papers;
+        this.elements = elements;
     }
 
     @Override
@@ -35,29 +38,24 @@ public class ExpandableAdapter extends RecyclerView.Adapter<ExpandableAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        String s = papers.get(position);
+        String s = elements.get(position);
         holder.tvPaperName.setText(s);
-
+        holder.rlPaper.setOnClickListener(this);
     }
 
-    /*@Override
-    public int getItemCount() {
-        return papers.size();
-    }*/
 
     @Override
     public int getItemCount() {
         if (isShowMore) {
-            return papers.size();
+            return elements.size();
         }else{
-            if (papers.size() < 3) {
-                return papers.size();
+            if (elements.size() < 3) {
+                return elements.size();
             }else{
                 return 3;
             }
         }
     }
-
 
     public boolean isShowMore() {
         return isShowMore;
@@ -66,6 +64,11 @@ public class ExpandableAdapter extends RecyclerView.Adapter<ExpandableAdapter.Vi
     public void setShowMore(boolean showMore) {
         isShowMore = showMore;
         notifyDataSetChanged();
+    }
+
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(HuaApplication.mContext, "打开试卷...", Toast.LENGTH_SHORT).show();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{

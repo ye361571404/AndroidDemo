@@ -3,12 +3,12 @@ package hua.demo.feature.recyclerview.adapter;
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import hua.demo.R;
 import hua.demo.feature.recyclerview.bean.GroupBean;
@@ -20,19 +20,14 @@ public class RecyclerExpandableAdapter extends RecyclerView.Adapter<RecyclerExpa
 
 
     private Context mContext;
-    private ArrayList<String> papers;
-    private ArrayList<GroupBean> arrayList;
+    private List<GroupBean> groupList;
 
-    public RecyclerExpandableAdapter(Context context, ArrayList<GroupBean> arrayList) {
+    public RecyclerExpandableAdapter(Context context, ArrayList<GroupBean> groupList) {
         this.mContext = context;
-        if (arrayList == null) {
-            arrayList = new ArrayList<>();
+        if (groupList == null) {
+            groupList = new ArrayList<>();
         }
-        this.arrayList = arrayList;
-        papers = new ArrayList<>();
-        for (int i = 1; i < 5; i++) {
-            papers.add("试卷"+i);
-        }
+        this.groupList = groupList;
     }
 
     @Override
@@ -43,12 +38,12 @@ public class RecyclerExpandableAdapter extends RecyclerView.Adapter<RecyclerExpa
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        GroupBean group = arrayList.get(position);
+        GroupBean group = groupList.get(position);
         holder.tvGroupName.setText(group.getGroupName());
 
         ExpandableAdapter adapter = (ExpandableAdapter) holder.rvContent.getAdapter();
         if (adapter == null) {
-            adapter = new ExpandableAdapter(papers);
+            adapter = new ExpandableAdapter(group.getElements());
             holder.rvContent.setAdapter(adapter);
             holder.rvContent.setLayoutManager(new GridLayoutManager(mContext,3));
         }else{
@@ -62,7 +57,7 @@ public class RecyclerExpandableAdapter extends RecyclerView.Adapter<RecyclerExpa
 
     @Override
     public int getItemCount() {
-        return arrayList.size();
+        return groupList.size();
     }
 
 

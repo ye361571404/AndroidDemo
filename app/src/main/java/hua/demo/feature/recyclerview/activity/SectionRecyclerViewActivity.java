@@ -1,9 +1,6 @@
 package hua.demo.feature.recyclerview.activity;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -12,11 +9,13 @@ import java.util.List;
 import butterknife.Bind;
 import hua.demo.R;
 import hua.demo.feature.recyclerview.adapter.GroupRecyclerViewAdapter;
-import hua.demo.feature.recyclerview.adapter.RecyclerExpandableAdapter;
 import hua.demo.feature.recyclerview.adapter.SectionedSpanSizeLookup;
 import hua.demo.feature.recyclerview.bean.GroupBean;
 import hua.demo.main.activity.BaseActivity;
 
+/**
+ * 该demo实现源自博客:http://blog.csdn.net/wzlyd1/article/details/52292548
+ */
 public class SectionRecyclerViewActivity extends BaseActivity {
 
     @Bind(R.id.rv_content)
@@ -44,6 +43,7 @@ public class SectionRecyclerViewActivity extends BaseActivity {
     }
 
     private void initList() {
+        // 初始化列表数据
         groupList = new ArrayList<>();
         GroupBean groupBean = null;
         List<String> elements = null;
@@ -58,11 +58,14 @@ public class SectionRecyclerViewActivity extends BaseActivity {
         }
 
 
-        final GroupRecyclerViewAdapter adapter = new GroupRecyclerViewAdapter(mContext, groupList);
+        // 将列表数据展示到控件上
+        final GroupRecyclerViewAdapter adapter = new GroupRecyclerViewAdapter(groupList);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, 3);
+        // 设置header/footer/item分别占据的空间
         gridLayoutManager.setSpanSizeLookup(new SectionedSpanSizeLookup(adapter,gridLayoutManager));
         rvContent.setLayoutManager(gridLayoutManager);
+
         rvContent.setAdapter(adapter);
     }
 

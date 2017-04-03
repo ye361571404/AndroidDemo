@@ -9,10 +9,10 @@ import hua.demo.feature.recyclerview.adapter.holder.HeaderHolder;
 
 /**
  * Created by Administrator on 2017/4/3.
+ * 这个类是用来自定义每个item需要占据的空间
  */
 public class SectionedSpanSizeLookup extends GridLayoutManager.SpanSizeLookup {
 
-    private final String TAG = getClass().getSimpleName();
     private SectionedRecyclerViewAdapter<?, ?, ?> adapter = null;
     private GridLayoutManager gridLayoutManager = null;
 
@@ -21,13 +21,18 @@ public class SectionedSpanSizeLookup extends GridLayoutManager.SpanSizeLookup {
         this.gridLayoutManager = gridLayoutManager;
     }
 
+    /**
+     * 根据position返回需要占用的空间
+     * @param position
+     * @return
+     */
     @Override
     public int getSpanSize(int position) {
         if(adapter.isSectionHeaderPosition(position) || adapter.isSectionFooterPosition(position)){
-            Log.e(TAG, "getSpanSize: = " + gridLayoutManager.getSpanCount());
+            // 返回header/footer需要占据的空间
             return gridLayoutManager.getSpanCount();
         }else{
-            Log.e(TAG, "getSpanSize: = 1");
+            // 返回普通item需要占据的空间
             return 1;
         }
     }

@@ -8,6 +8,7 @@ import hua.demo.feature.recyclerview.activity.RecyclerExpandableActivity;
 import hua.demo.feature.recyclerview.activity.RecyclerViewActivity;
 import hua.demo.feature.recyclerview.activity.SectionRecyclerViewActivity;
 import hua.demo.feature.rxjava.RxJavaDemoActivity;
+import hua.demo.feature.showgif.activity.ShowGifActivity;
 
 /**
  * Created by Administrator on 2017/3/2.
@@ -23,7 +24,8 @@ public enum ConstantItemEnum {
     CUSTOM_VIEW("03 自定义view",CustomViewActivity.class),
     MUSIC_PLAYER("04 音乐播放器",MusicPlayerActivity.class),
     RXJAVA("05 RxJava",RxJavaDemoActivity.class),
-    LAUNCH_MODE("06 Activity启动模式",LaunchModeActivity.class);
+    LAUNCH_MODE("06 Activity启动模式",LaunchModeActivity.class),
+    SHOW_GIF("07 显示gif图片",ShowGifActivity.class);
 
     private int itemType;
 

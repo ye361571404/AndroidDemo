@@ -35,4 +35,5 @@ dependencies {
     compile files('lib/nineoldandroids-2.4.0.jar')
     //该库能实现RecyclerView分组功能:    https://github.com/luizgrp/SectionedRecyclerViewAdapter
     compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.0.5'
+    compile 'org.xutils:xutils:3.5.0'
 }

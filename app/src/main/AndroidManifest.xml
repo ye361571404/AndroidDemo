@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hua.demo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -62,7 +64,8 @@
         <activity android:name=".feature.launchmode.activity.ThirdActivity" />
         <activity android:name=".feature.customview.activity.RecentReadActivity" />
         <activity android:name=".feature.recyclerview.activity.RecyclerExpandableActivity" />
-        <activity android:name=".feature.recyclerview.activity.SectionRecyclerViewActivity"></activity>
+        <activity android:name=".feature.recyclerview.activity.SectionRecyclerViewActivity" />
+        <activity android:name=".feature.showgif.activity.ShowGifActivity"></activity>
     </application>
 
 </manifest>

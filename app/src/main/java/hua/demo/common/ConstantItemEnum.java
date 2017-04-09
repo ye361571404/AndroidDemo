@@ -9,6 +9,7 @@ import hua.demo.feature.recyclerview.activity.RecyclerExpandableActivity;
 import hua.demo.feature.recyclerview.activity.RecyclerViewActivity;
 import hua.demo.feature.recyclerview.activity.SectionRecyclerViewActivity;
 import hua.demo.feature.rxjava.RxJavaDemoActivity;
+import hua.demo.feature.sharedpreferences.activity.SharedPreferencesActivity;
 import hua.demo.feature.showgif.activity.ShowGifActivity;
 
 /**
@@ -27,7 +28,8 @@ public enum ConstantItemEnum {
     RXJAVA("05 RxJava",RxJavaDemoActivity.class),
     LAUNCH_MODE("06 Activity启动模式",LaunchModeActivity.class),
     SHOW_GIF("07 显示gif图片",ShowGifActivity.class),
-    ASSEST("08 操作Assets目录文件",AssetsDemoActivity.class);
+    ASSEST("08 操作Assets目录文件",AssetsDemoActivity.class),
+    SHARED_PREFERENCES("09 操作SharedPreferences文件",SharedPreferencesActivity.class);
 
     private int itemType;
 

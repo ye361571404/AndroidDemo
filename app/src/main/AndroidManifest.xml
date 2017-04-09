@@ -66,7 +66,8 @@
         <activity android:name=".feature.recyclerview.activity.RecyclerExpandableActivity" />
         <activity android:name=".feature.recyclerview.activity.SectionRecyclerViewActivity" />
         <activity android:name=".feature.showgif.activity.ShowGifActivity" />
-        <activity android:name=".feature.assets.activity.AssetsDemoActivity"></activity>
+        <activity android:name=".feature.assets.activity.AssetsDemoActivity" />
+        <activity android:name=".feature.sharedpreferences.activity.SharedPreferencesActivity"></activity>
     </application>
 
 </manifest>

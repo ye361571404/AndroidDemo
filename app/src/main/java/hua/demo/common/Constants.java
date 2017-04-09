@@ -6,9 +6,13 @@ package hua.demo.common;
 
 public class Constants {
 
-    /** 1.RecyclerView **/
-    public final static int ITEM__TYPE_RECYCLER_VIEW = 1;
-    /** 2.ImageView **/
-    public final static int ITEM__TYPE_IMAGE_VIEW = 2;
+
+    /** app制定缓存目录 **/
+    public final static String APP_CACHE_DIR = "AndroidDemo";
+    /** app异常捕获文件缓存目录 **/
+    public final static String APP_CACHE_DIR_CRASH = "AndroidDemo/crash";
+    public final static String APP_CACHE_DIR_FILES= "AndroidDemo/files";
+
+
 
 }

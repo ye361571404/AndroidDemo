@@ -1,5 +1,6 @@
 package hua.demo.common;
 
+import hua.demo.feature.assets.activity.AssetsDemoActivity;
 import hua.demo.feature.launchmode.activity.LaunchModeActivity;
 import hua.demo.feature.customview.activity.CustomViewActivity;
 import hua.demo.feature.imageview.activity.ImageViewActivity;
@@ -25,7 +26,8 @@ public enum ConstantItemEnum {
     MUSIC_PLAYER("04 音乐播放器",MusicPlayerActivity.class),
     RXJAVA("05 RxJava",RxJavaDemoActivity.class),
     LAUNCH_MODE("06 Activity启动模式",LaunchModeActivity.class),
-    SHOW_GIF("07 显示gif图片",ShowGifActivity.class);
+    SHOW_GIF("07 显示gif图片",ShowGifActivity.class),
+    ASSEST("08 操作Assets目录文件",AssetsDemoActivity.class);
 
     private int itemType;
 

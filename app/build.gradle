@@ -36,4 +36,6 @@ dependencies {
     //该库能实现RecyclerView分组功能:    https://github.com/luizgrp/SectionedRecyclerViewAdapter
     compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.0.5'
     compile 'org.xutils:xutils:3.5.0'
+    //android 常用工具类 https://github.com/litesuits/android-common
+    compile 'com.luffykou:android-common-utils:1.1.3'
 }

@@ -65,7 +65,8 @@
         <activity android:name=".feature.customview.activity.RecentReadActivity" />
         <activity android:name=".feature.recyclerview.activity.RecyclerExpandableActivity" />
         <activity android:name=".feature.recyclerview.activity.SectionRecyclerViewActivity" />
-        <activity android:name=".feature.showgif.activity.ShowGifActivity"></activity>
+        <activity android:name=".feature.showgif.activity.ShowGifActivity" />
+        <activity android:name=".feature.assets.activity.AssetsDemoActivity"></activity>
     </application>
 
 </manifest>

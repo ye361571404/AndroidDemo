@@ -28,10 +28,13 @@ public class HuaApplication extends Application {
         handler = new Handler();
 
         x.Ext.init(this);
-        x.Ext.setDebug(BuildConfig.DEBUG); // 是否输出debug日志, 开启debug会影响性能.
+        // 是否输出debug日志, 开启debug会影响性能.
+        x.Ext.setDebug(BuildConfig.DEBUG);
 
         // 添加 奔溃日志 本地记录
         // CrashHandler.getInstance().init(this);
+        // 初始化toast
+        ToastAlone.getInstance().init(this);
     }
 
     private static Context context;

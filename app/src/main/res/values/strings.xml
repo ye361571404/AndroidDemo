@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AndroidDemo</string>
+    <string name="fw_return_data_error">数据返回错误</string>
+    <string name="fw_data_loading_done">数据加载完成</string>
 
 
     <string-array name="features">

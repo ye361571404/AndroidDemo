@@ -50,6 +50,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.tv_item:
                 ConstantItemEnum itemEnum = (ConstantItemEnum) v.getTag();
                 startActivity(new Intent(this, itemEnum.getClazz()));
+
                 break;
         }
     }

@@ -67,7 +67,7 @@ public class FileUtil {
      * @return
      */
     public static String getPackageName(){
-        return HuaApplication.mContext.getPackageName();
+        return HuaApplication.getContext().getPackageName();
     }
 
 

@@ -68,7 +68,7 @@ public class ExpandableAdapter extends RecyclerView.Adapter<ExpandableAdapter.Vi
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(HuaApplication.mContext, "打开试卷...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(HuaApplication.getContext(), "打开试卷...", Toast.LENGTH_SHORT).show();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{

@@ -13,8 +13,6 @@ import org.xutils.x;
 
 public class HuaApplication extends Application {
 
-    public static Context mContext;
-
     @Override
     public void onCreate() {
         super.onCreate();

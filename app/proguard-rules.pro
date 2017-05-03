@@ -15,3 +15,26 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontwarn
+
+-keep class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keep class **$$ViewBinder { *; }
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <fields>;
+}
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <methods>;
+}
+
+
+
+-keep class hua.demo.feature.proguard.bean.** {*;}
+-keep class com.litesuits.common.utils.** {*;}
+
+# Warning:com.litesuits.common.utils.NotificationUtil: can't find referenced method 'void setLatestEventInfo(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent)' in library class android.app.Notification
+-dontwarn android.support.v4.**
+-dontwarn android.app.Notification

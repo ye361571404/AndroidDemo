@@ -32,7 +32,7 @@
 
 
 
--keep class hua.demo.feature.proguard.bean.** {*;}
+-keep class com.hua.feature.proguard.bean.** {*;}
 -keep class com.litesuits.common.utils.** {*;}
 
 # Warning:com.litesuits.common.utils.NotificationUtil: can't find referenced method 'void setLatestEventInfo(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent)' in library class android.app.Notification

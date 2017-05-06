@@ -19,7 +19,7 @@ android {
     buildToolsVersion project.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "hua.demo"
+        applicationId "com.hua"
         minSdkVersion project.ext.minSdkVersion        // 编译版本
         targetSdkVersion project.ext.targetSdkVersion
         versionCode 2

@@ -5,11 +5,11 @@
     android:layout_height="match_parent">
 
 
-    <hua.demo.feature.customview.view.ParallaxEffectsListView
+    <com.hua.feature.customview.view.ParallaxEffectsListView
         android:id="@+id/lv_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </hua.demo.feature.customview.view.ParallaxEffectsListView>
+    </com.hua.feature.customview.view.ParallaxEffectsListView>
 
 </RelativeLayout>

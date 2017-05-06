@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.demo">
+    package="com.hua">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -68,7 +68,8 @@
         <activity android:name="com.hua.feature.showgif.activity.ShowGifActivity" />
         <activity android:name="com.hua.feature.assets.activity.AssetsDemoActivity" />
         <activity android:name="com.hua.feature.sharedpreferences.activity.SharedPreferencesActivity" />
-        <activity android:name="com.hua.feature.proguard.activity.ProguardActivity"></activity>
+        <activity android:name="com.hua.feature.proguard.activity.ProguardActivity" />
+        <activity android:name="com.hua.demos.DemosActivity"></activity>
     </application>
 
 </manifest>

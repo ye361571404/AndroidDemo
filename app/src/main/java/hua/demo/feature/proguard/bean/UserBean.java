@@ -1,0 +1,38 @@
+package hua.demo.feature.proguard.bean;
+
+/**
+ * Created by Administrator on 2017/5/2.
+ */
+
+public class UserBean {
+
+
+    private String name;
+
+    private String email;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    @Override
+    public String toString() {
+        return "UserBean{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}

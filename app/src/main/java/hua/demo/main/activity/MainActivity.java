@@ -5,13 +5,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import hua.demo.R;
 import hua.demo.common.ConstantItemEnum;
-import hua.demo.feature.recyclerview.activity.RecyclerViewActivity;
 import hua.demo.main.adapter.FeaturesAdapter;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {

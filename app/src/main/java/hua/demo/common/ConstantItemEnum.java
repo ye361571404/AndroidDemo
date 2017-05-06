@@ -5,6 +5,7 @@ import hua.demo.feature.launchmode.activity.LaunchModeActivity;
 import hua.demo.feature.customview.activity.CustomViewActivity;
 import hua.demo.feature.imageview.activity.ImageViewActivity;
 import hua.demo.feature.player.activity.MusicPlayerActivity;
+import hua.demo.feature.proguard.activity.ProguardActivity;
 import hua.demo.feature.recyclerview.activity.RecyclerExpandableActivity;
 import hua.demo.feature.recyclerview.activity.RecyclerViewActivity;
 import hua.demo.feature.recyclerview.activity.SectionRecyclerViewActivity;
@@ -29,7 +30,8 @@ public enum ConstantItemEnum {
     LAUNCH_MODE("06 Activity启动模式",LaunchModeActivity.class),
     SHOW_GIF("07 显示gif图片",ShowGifActivity.class),
     ASSEST("08 操作Assets目录文件",AssetsDemoActivity.class),
-    SHARED_PREFERENCES("09 操作SharedPreferences文件",SharedPreferencesActivity.class);
+    SHARED_PREFERENCES("09 操作SharedPreferences文件",SharedPreferencesActivity.class),
+    DEMO_PROGUAR_ACTIVITY("10 测试混淆",ProguardActivity.class);
 
     private int itemType;
 

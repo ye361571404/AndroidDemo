@@ -1,8 +1,23 @@
 apply plugin: 'com.android.application'     // 说明该程序时主modle
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'MyDemo'
+            keyPassword 'GAIBIAN'
+            storeFile file('D:/StudioWorkspace/AndroidDemo/AndroidDemo.jks')
+            storePassword 'GAIBIAN'
+        }
+    }
+
+    lintOptions {
+        // Error:(2) Error: "app_name" is not translated in "zh" (Chinese) [MissingTranslation]
+        disable 'MissingTranslation'
+    }
+
     compileSdkVersion project.ext.compileSdkVersion
     buildToolsVersion project.ext.buildToolsVersion
+
     defaultConfig {
         applicationId "hua.demo"
         minSdkVersion project.ext.minSdkVersion        // 编译版本
@@ -11,13 +26,27 @@ android {
         versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+
     buildTypes {
-        release {
+        debug {
             minifyEnabled false     // true 使用混淆    false 不使用混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        release {
+            minifyEnabled true     // true 使用混淆    false 不使用混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
+
+
+
+
+
+
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -38,4 +67,5 @@ dependencies {
     compile 'org.xutils:xutils:3.5.0'
     //android 常用工具类 https://github.com/litesuits/android-common
     compile 'com.luffykou:android-common-utils:1.1.3'
+    compile files('lib/gson-2.2.1.jar')
 }

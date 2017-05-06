@@ -1,15 +1,15 @@
-package com.hua.feature.customview.activity;
+package com.hua.demos.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.hua.R;
 
-public class RecentReadActivity extends AppCompatActivity {
+public class TextViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recent_read);
+        setContentView(R.layout.activity_text_view);
     }
 }

@@ -10,7 +10,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.common.HuaApplication;
 
 /**

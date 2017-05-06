@@ -15,4 +15,6 @@ public class Constants {
 
 
 
+    public static final String CATEGORY_MY_SAMPLE_CODE = "android.intent.category.MY_SAMPLE_CODE";
+
 }

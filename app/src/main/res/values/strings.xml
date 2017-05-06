@@ -4,9 +4,8 @@
     <string name="fw_data_loading_done">数据加载完成</string>
 
 
-    <string-array name="features">
-        <item>01 RecyclerView 实现下拉刷新上拉加载</item>
-        <item>02 ImageView</item>
-    </string-array>
+    <string name="views_textview">views/textview</string>
+    <string name="views_button">views/button</string>
+
 
 </resources>

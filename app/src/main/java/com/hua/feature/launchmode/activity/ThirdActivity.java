@@ -2,7 +2,7 @@ package com.hua.feature.launchmode.activity;
 
 import android.util.Log;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 
 public class ThirdActivity extends BaseActivity {

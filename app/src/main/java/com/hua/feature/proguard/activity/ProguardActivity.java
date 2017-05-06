@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 
 import org.xutils.common.util.LogUtil;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.proguard.bean.UserBean;
 
 public class ProguardActivity extends AppCompatActivity {

@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.demo.R;
+import com.hua.R;
 
 /**
  * 原创作者：

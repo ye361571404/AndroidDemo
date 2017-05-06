@@ -5,7 +5,7 @@ import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 
 /**

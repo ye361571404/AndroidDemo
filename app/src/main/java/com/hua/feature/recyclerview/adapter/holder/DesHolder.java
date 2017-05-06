@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.demo.R;
+import com.hua.R;
 
 /**
  * Created by Administrator on 2017/4/3.

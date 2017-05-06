@@ -8,7 +8,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.demo.R;
+import com.hua.R;
 
 /**
  * Created by Administrator on 2017/3/14.

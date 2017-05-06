@@ -29,7 +29,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.player.adapter.MusicAdapter;
 import com.hua.feature.player.model.AudioDecorator;
 import com.hua.feature.player.model.PlayList;

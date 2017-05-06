@@ -9,7 +9,7 @@ import java.io.File;
 import java.util.List;
 
 import butterknife.Bind;
-import com.demo.R;
+import com.hua.R;
 import com.hua.common.Constants;
 import com.hua.main.activity.BaseActivity;
 import com.hua.utils.AssetsUtil;

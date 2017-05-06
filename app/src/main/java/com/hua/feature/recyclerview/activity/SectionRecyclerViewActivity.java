@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.recyclerview.adapter.GroupRecyclerViewAdapter;
 import com.hua.feature.recyclerview.adapter.SectionedSpanSizeLookup;
 import com.hua.feature.recyclerview.bean.GroupBean;

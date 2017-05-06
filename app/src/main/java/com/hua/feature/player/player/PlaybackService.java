@@ -11,7 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.NotificationCompat;
 import android.widget.RemoteViews;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.player.activity.MusicPlayerActivity;
 import com.hua.feature.player.model.AudioDecorator;
 import com.hua.feature.player.model.PlayList;

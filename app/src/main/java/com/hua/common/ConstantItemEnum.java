@@ -1,5 +1,6 @@
 package com.hua.common;
 
+import com.hua.demos.DemosActivity;
 import com.hua.feature.assets.activity.AssetsDemoActivity;
 import com.hua.feature.launchmode.activity.LaunchModeActivity;
 import com.hua.feature.customview.activity.CustomViewActivity;
@@ -20,6 +21,7 @@ import com.hua.feature.showgif.activity.ShowGifActivity;
 public enum ConstantItemEnum {
 
 
+    DEMOS("00 Demos",DemosActivity.class),
     RECYCLER_VIEW("01 RecyclerView 实现下拉刷新上拉加载",RecyclerViewActivity.class),
     RECYCLER_EXPANDABLE_VIEW_DEMO01("01 RecyclerView 实现可以展开收缩的item-demo1",RecyclerExpandableActivity.class),
     RECYCLER_EXPANDABLE_VIEW_DEMO02("01 RecyclerView 实现可以展开收缩的item-demo2",SectionRecyclerViewActivity.class),

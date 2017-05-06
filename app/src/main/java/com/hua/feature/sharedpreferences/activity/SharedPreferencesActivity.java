@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.OnClick;
-import com.demo.R;
+import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 import com.hua.utils.SPUtil;
 

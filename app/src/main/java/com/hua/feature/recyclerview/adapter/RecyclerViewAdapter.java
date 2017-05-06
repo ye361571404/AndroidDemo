@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import com.demo.R;
+import com.hua.R;
 
 /**
  * Created by Administrator on 2017/2/24.

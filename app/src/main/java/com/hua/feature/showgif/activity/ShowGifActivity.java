@@ -10,7 +10,7 @@ import org.xutils.image.ImageOptions;
 import org.xutils.x;
 
 import butterknife.Bind;
-import com.demo.R;
+import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 
 public class ShowGifActivity extends BaseActivity {

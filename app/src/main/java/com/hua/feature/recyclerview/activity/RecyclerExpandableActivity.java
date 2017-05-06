@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.recyclerview.adapter.RecyclerExpandableAdapter;
 import com.hua.feature.recyclerview.bean.GroupBean;
 import com.hua.main.activity.BaseActivity;

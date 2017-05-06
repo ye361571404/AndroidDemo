@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.customview.view.ParallaxEffectsListView;
 
 

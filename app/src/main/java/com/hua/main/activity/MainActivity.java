@@ -8,7 +8,7 @@ import android.view.View;
 import java.util.Arrays;
 import java.util.List;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.common.ConstantItemEnum;
 import com.hua.main.adapter.FeaturesAdapter;
 

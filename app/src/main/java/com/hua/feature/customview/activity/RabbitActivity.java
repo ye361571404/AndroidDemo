@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.customview.view.RabbitView;
 
 public class RabbitActivity extends AppCompatActivity {

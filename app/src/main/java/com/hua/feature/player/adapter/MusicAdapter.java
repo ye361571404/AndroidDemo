@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.player.model.AudioDecorator;
 import com.hua.feature.player.model.PlayList;
 

@@ -15,7 +15,7 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
 import java.util.ArrayList;
 
-import com.demo.R;
+import com.hua.R;
 import com.hua.feature.recyclerview.adapter.RecyclerViewAdapter;
 import com.hua.main.activity.BaseActivity;
 

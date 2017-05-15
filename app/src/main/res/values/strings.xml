@@ -6,6 +6,7 @@
 
     <string name="views_textview">views/textview</string>
     <string name="views_button">views/button</string>
+    <string name="views_custom_dialog">views/dialog/CustomDialog</string>
 
 
 </resources>

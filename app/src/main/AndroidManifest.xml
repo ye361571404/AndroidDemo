@@ -71,20 +71,27 @@
         <activity android:name=".feature.proguard.activity.ProguardActivity" />
         <activity android:name=".demos.DemosActivity" />
 
-
-
-        <!-- 以下为Demos-->
-        <activity android:name=".demos.views.TextViewActivity" android:label="@string/views_textview">
+        <!-- 以下为Demos -->
+        <activity
+            android:name=".demos.views.TextViewActivity"
+            android:label="@string/views_textview">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        <activity android:name=".demos.views.ButtonActivity" android:label="@string/views_button">
+        <activity
+            android:name=".demos.views.ButtonActivity"
+            android:label="@string/views_button">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
 
+        <activity android:name=".demos.views.DialogActivity" android:label="@string/views_custom_dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>

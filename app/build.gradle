@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'     // 说明该程序时主modle
 
 android {
-    signingConfigs {
+    /*signingConfigs {
         config {
             keyAlias 'MyDemo'
             keyPassword 'GAIBIAN'
             storeFile file('D:/StudioWorkspace/AndroidDemo/AndroidDemo.jks')
             storePassword 'GAIBIAN'
         }
-    }
+    }*/
 
     lintOptions {
         // Error:(2) Error: "app_name" is not translated in "zh" (Chinese) [MissingTranslation]
@@ -32,12 +32,26 @@ android {
         debug {
             minifyEnabled false     // true 使用混淆    false 不使用混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            // signingConfig signingConfigs.config
         }
         release {
             minifyEnabled true     // true 使用混淆    false 不使用混淆
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            // signingConfig signingConfigs.config
+        }
+    }
+
+    productFlavors{
+        aika{ }
+    }
+
+    applicationVariants.all{ variant ->
+        variant.outputs.each{ output ->
+            def outputFile = output.outputFile
+            if(outputFile != null && outputFile.name.endsWith(".apk")){
+                def fileName = "艾卡记忆_v${defaultConfig.versionName}_${variant.name}.apk"
+                output.outputFile = new File(outputFile.parent,fileName)
+            }
         }
     }
 }
@@ -70,3 +84,10 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha5'
     testCompile 'junit:junit:4.12'
 }
+
+/**
+ * gradle 降级
+ *  1.配置gradle-wrapper.properties文件
+ *  2.配置根目录下的build.gradle
+ *
+ */

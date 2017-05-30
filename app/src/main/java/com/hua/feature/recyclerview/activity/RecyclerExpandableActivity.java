@@ -12,6 +12,9 @@ import com.hua.feature.recyclerview.adapter.RecyclerExpandableAdapter;
 import com.hua.feature.recyclerview.bean.GroupBean;
 import com.hua.main.activity.BaseActivity;
 
+/**
+ * 取出到顶然后下拉的效果  android:overScrollMode="never"
+ */
 public class RecyclerExpandableActivity extends BaseActivity {
 
 

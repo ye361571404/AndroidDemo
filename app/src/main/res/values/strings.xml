@@ -1,4 +1,10 @@
 <resources>
+    <!--
+        string中的转义符
+        /n:换行
+    -->
+
+
     <string name="app_name">AndroidDemo</string>
     <string name="fw_return_data_error">数据返回错误</string>
     <string name="fw_data_loading_done">数据加载完成</string>
@@ -6,6 +12,11 @@
 
     <string name="views_textview">views/textview</string>
     <string name="views_button">views/button</string>
+    <string name="views_webview">views/WebView</string>
+
+
+    <string name="dependencies_xutils">dependencies/xutils</string>
+    <string name="dependencies_butterknifer">dependencies/butterknifer</string>
     <string name="views_custom_dialog">views/dialog/CustomDialog</string>
 
 

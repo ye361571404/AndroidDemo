@@ -92,6 +92,32 @@
         <activity android:name=".demos.views.DialogActivity" android:label="@string/views_custom_dialog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demos.views.WebViewActivity"
+            android:label="@string/views_webview">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demos.dependencies.xutils.XUtilsActivity"
+            android:label="@string/dependencies_xutils">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demos.dependencies.butterknifer.ButerkniferActivity"
+            android:label="@string/dependencies_butterknifer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>

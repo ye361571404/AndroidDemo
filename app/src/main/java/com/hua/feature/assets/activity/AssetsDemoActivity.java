@@ -8,7 +8,7 @@ import org.xutils.common.util.LogUtil;
 import java.io.File;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import com.hua.R;
 import com.hua.common.Constants;
 import com.hua.main.activity.BaseActivity;
@@ -17,7 +17,7 @@ import com.hua.utils.StorageUtil;
 
 public class AssetsDemoActivity extends BaseActivity {
 
-    @Bind(R.id.tv_content)
+    @BindView(R.id.tv_content)
     TextView tvContent;
 
     @Override

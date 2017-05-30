@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.hua.R;
 import com.hua.main.activity.BaseActivity;
@@ -15,7 +15,7 @@ import com.hua.main.activity.BaseActivity;
 public class LaunchModeActivity extends BaseActivity {
 
 
-    @Bind(R.id.btn_single_instance)
+    @BindView(R.id.btn_single_instance)
     Button btnSingleInstance;
 
 

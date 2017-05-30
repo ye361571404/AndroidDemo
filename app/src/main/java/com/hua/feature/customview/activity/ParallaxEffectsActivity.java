@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.hua.R;
 import com.hua.feature.customview.view.ParallaxEffectsListView;
@@ -20,7 +20,7 @@ import com.hua.feature.customview.view.ParallaxEffectsListView;
  */
 public class ParallaxEffectsActivity extends AppCompatActivity {
 
-    @Bind(R.id.lv_content)
+    @BindView(R.id.lv_content)
     ParallaxEffectsListView mLvContent;
 
     @Override

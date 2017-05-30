@@ -9,13 +9,13 @@ import org.xutils.common.util.DensityUtil;
 import org.xutils.image.ImageOptions;
 import org.xutils.x;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 
 public class ShowGifActivity extends BaseActivity {
 
-    @Bind(R.id.iv_show_gif)
+    @BindView(R.id.iv_show_gif)
     ImageView ivShowGif;
 
 

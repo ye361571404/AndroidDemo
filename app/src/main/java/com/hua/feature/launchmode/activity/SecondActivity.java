@@ -5,14 +5,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 
 public class SecondActivity extends BaseActivity {
 
-    @Bind(R.id.tv_item)
+    @BindView(R.id.tv_item)
     TextView tvItem;
 
     @Override

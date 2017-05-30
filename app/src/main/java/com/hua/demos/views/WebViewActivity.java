@@ -11,15 +11,15 @@ import android.widget.ProgressBar;
 import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class WebViewActivity extends BaseActivity {
 
 
-    @Bind(R.id.myProgressBar)
+    @BindView(R.id.myProgressBar)
     ProgressBar bar;
-    @Bind(R.id.webview)
+    @BindView(R.id.webview)
     WebView webview;
 
     @Override

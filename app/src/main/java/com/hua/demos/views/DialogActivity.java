@@ -7,14 +7,14 @@ import android.widget.TextView;
 import com.hua.R;
 import com.hua.main.activity.BaseActivity;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class DialogActivity extends BaseActivity {
 
 
-    @Bind(R.id.tv_dialog01)
+    @BindView(R.id.tv_dialog01)
     TextView tvDialog01;
 
     @Override

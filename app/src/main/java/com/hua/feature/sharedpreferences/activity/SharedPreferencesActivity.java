@@ -4,7 +4,7 @@ import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.hua.R;
 import com.hua.main.activity.BaseActivity;
@@ -13,11 +13,11 @@ import com.hua.utils.SPUtil;
 public class SharedPreferencesActivity extends BaseActivity {
 
 
-    @Bind(R.id.tv_name)
+    @BindView(R.id.tv_name)
     TextView tvName;
-    @Bind(R.id.tv_pwd)
+    @BindView(R.id.tv_pwd)
     TextView tvPwd;
-    @Bind(R.id.btn_login)
+    @BindView(R.id.btn_login)
     Button btnLogin;
     private SharedPreferences sp;
 

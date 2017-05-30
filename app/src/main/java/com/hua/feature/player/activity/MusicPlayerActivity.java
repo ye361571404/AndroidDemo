@@ -26,7 +26,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.hua.R;
@@ -58,31 +58,31 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
 
     private static final long UPDATE_PROGRESS_INTERVAL = 1000;
 
-    @Bind(R.id.rv_content)
+    @BindView(R.id.rv_content)
     RecyclerView rvContent;
-    @Bind(R.id.rl_list)
+    @BindView(R.id.rl_list)
     RelativeLayout rlList;
-    @Bind(R.id.text_view_progress)
+    @BindView(R.id.text_view_progress)
     TextView textViewProgress;
-    @Bind(R.id.seek_bar)
+    @BindView(R.id.seek_bar)
     SeekBar seekBar;
-    @Bind(R.id.text_view_duration)
+    @BindView(R.id.text_view_duration)
     TextView textViewDuration;
-    @Bind(R.id.layout_progress)
+    @BindView(R.id.layout_progress)
     LinearLayout layoutProgress;
-    @Bind(R.id.button_play_mode_toggle)
+    @BindView(R.id.button_play_mode_toggle)
     ImageView buttonPlayModeToggle;
-    @Bind(R.id.button_play_last)
+    @BindView(R.id.button_play_last)
     ImageView buttonPlayLast;
-    @Bind(R.id.button_play_toggle)
+    @BindView(R.id.button_play_toggle)
     ImageView buttonPlayToggle;
-    @Bind(R.id.button_play_next)
+    @BindView(R.id.button_play_next)
     ImageView buttonPlayNext;
-    @Bind(R.id.button_favorite_toggle)
+    @BindView(R.id.button_favorite_toggle)
     ImageView buttonFavoriteToggle;
-    @Bind(R.id.layout_play_controls)
+    @BindView(R.id.layout_play_controls)
     LinearLayout layoutPlayControls;
-    @Bind(R.id.activity_main)
+    @BindView(R.id.activity_main)
     RelativeLayout activityMain;
 
 
@@ -404,7 +404,6 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
     protected void onDestroy() {
         mPresenter.unsubscribe();
         super.onDestroy();
-        ButterKnife.unbind(this);
     }
 
 

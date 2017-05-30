@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import com.hua.R;
 import com.hua.feature.customview.view.CustomProgress;
@@ -17,13 +17,13 @@ import com.hua.main.activity.BaseActivity;
 public class CustomViewActivity extends BaseActivity {
 
 
-    @Bind(R.id.cp_progress)
+    @BindView(R.id.cp_progress)
     CustomProgress mCustomProgress;
-    @Bind(R.id.btn_rabbit)
+    @BindView(R.id.btn_rabbit)
     Button mBtnRabbit;
-    @Bind(R.id.btn_parallax_effects)
+    @BindView(R.id.btn_parallax_effects)
     Button mBtnParallaxEffects;
-    @Bind(R.id.btn_recent_read)
+    @BindView(R.id.btn_recent_read)
     Button mBtnRecentRead;
 
     private int max = 200;

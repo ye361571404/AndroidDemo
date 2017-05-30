@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import com.hua.R;
 import com.hua.feature.recyclerview.adapter.RecyclerExpandableAdapter;
 import com.hua.feature.recyclerview.bean.GroupBean;
@@ -18,7 +18,7 @@ import com.hua.main.activity.BaseActivity;
 public class RecyclerExpandableActivity extends BaseActivity {
 
 
-    @Bind(R.id.rv_content)
+    @BindView(R.id.rv_content)
     RecyclerView rvContent;
     private ArrayList<GroupBean> groupList;
 

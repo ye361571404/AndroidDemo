@@ -9,7 +9,7 @@ project.ext {
     // Android编译版本相关
     compileSdkVersion = 25
     buildToolsVersion = "25.0.2"
-    minSdkVersion = 14
+    minSdkVersion = 15
     targetSdkVersion = 25
 
     // 混淆相关

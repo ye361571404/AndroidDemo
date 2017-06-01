@@ -3,6 +3,12 @@ package com.hua.common;
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
+import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
+
+import com.bilibili.magicasakura.utils.ThemeUtils;
+import com.hua.R;
+import com.hua.demos.dependencies.magica.ThemeHelper;
 
 import org.xutils.BuildConfig;
 import org.xutils.x;
@@ -11,7 +17,7 @@ import org.xutils.x;
  * Created by Administrator on 2017/3/6.
  */
 
-public class HuaApplication extends Application {
+public class HuaApplication extends Application implements ThemeUtils.switchColor{
 
     @Override
     public void onCreate() {
@@ -33,6 +39,9 @@ public class HuaApplication extends Application {
         // CrashHandler.getInstance().init(this);
         // 初始化toast
         ToastAlone.getInstance().init(this);
+
+        // 初始化动态改变应用主题库
+        ThemeUtils.setSwitchColor(this);
     }
 
     private static Context context;
@@ -52,5 +61,88 @@ public class HuaApplication extends Application {
     public static Handler getHandler() {
         return handler;
     }
+
+    @Override
+    public int replaceColorById(Context context, @ColorRes int colorId) {
+        if (ThemeHelper.isDefaultTheme(context)) {
+            return context.getResources().getColor(colorId);
+        }
+        String theme = getTheme(context);
+        if (theme != null) {
+            colorId = getThemeColorId(context, colorId, theme);
+        }
+        return context.getResources().getColor(colorId);
+    }
+
+    @Override
+    public int replaceColor(Context context, @ColorInt int originColor) {
+        if (ThemeHelper.isDefaultTheme(context)) {
+            // 默认主题颜色
+            return originColor;
+        }
+        String theme = getTheme(context);
+        int colorId = -1;
+
+        if (theme != null) {
+            colorId = getThemeColor(context, originColor, theme);
+        }
+        return colorId != -1 ? getResources().getColor(colorId) : originColor;
+    }
+
+    /**
+     * 获取颜色
+     * @param context
+     * @param color
+     * @param theme
+     * @return
+     */
+    private @ColorRes int getThemeColor(Context context, int color, String theme) {
+        switch (color) {
+            case 0xfffb7299:
+                return context.getResources().getIdentifier(theme, "color", getPackageName());
+            case 0xffb85671:
+                return context.getResources().getIdentifier(theme + "_dark", "color", getPackageName());
+            case 0x99f0486c:
+                return context.getResources().getIdentifier(theme + "_trans", "color", getPackageName());
+        }
+        return -1;
+    }
+
+    /**
+     * 获取当前主题名称,color定义的主题色前缀字符串
+     * @param context
+     * @return
+     */
+    private String getTheme(Context context) {
+        if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_STORM) {
+            return "blue";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_HOPE) {
+            return "purple";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_WOOD) {
+            return "green";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_LIGHT) {
+            return "green_light";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_THUNDER) {
+            return "yellow";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_SAND) {
+            return "orange";
+        } else if (ThemeHelper.getTheme(context) == ThemeHelper.CARD_FIREY) {
+            return "red";
+        }
+        return null;
+    }
+
+    private @ColorRes int getThemeColorId(Context context, int colorId, String theme) {
+        switch (colorId) {
+            case R.color.theme_color_primary:
+                return context.getResources().getIdentifier(theme, "color", getPackageName());
+            case R.color.theme_color_primary_dark:
+                return context.getResources().getIdentifier(theme + "_dark", "color", getPackageName());
+            case R.color.theme_color_primary_trans:
+                return context.getResources().getIdentifier(theme + "_trans", "color", getPackageName());
+        }
+        return colorId;
+    }
+
 
 }

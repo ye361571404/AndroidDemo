@@ -17,7 +17,11 @@
 
     <string name="dependencies_xutils">dependencies/xutils</string>
     <string name="dependencies_butterknifer">dependencies/butterknifer</string>
+    <string name="dependencies_magica_sakura">dependencies/magicaSakura(多主题框架)</string>
     <string name="views_custom_dialog">views/dialog/CustomDialog</string>
 
+
+    <string name="cancel">cancel</string>
+    <string name="confirm">ok</string>
 
 </resources>

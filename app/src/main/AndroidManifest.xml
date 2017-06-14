@@ -147,13 +147,23 @@
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        <activity android:name=".demos.views.ExpandableListViewActivity" android:label="@string/views_listView_expandableListView">
+        <activity
+            android:name=".demos.views.ExpandableListViewActivity"
+            android:label="@string/views_listView_expandableListView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity android:name=".demos.dependencies.xutils.XUtilsDownloadActivity" android:label="@string/dependencies_xutils_download">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demos.dependencies.xutils.DownloadActivity" />
     </application>
 
 </manifest>

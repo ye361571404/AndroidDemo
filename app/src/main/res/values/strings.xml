@@ -17,13 +17,21 @@
     <string name="views_listView_expandableListView">views/ListView/ExpandableListView</string>
 
 
-    <string name="dependencies_xutils">dependencies/xutils</string>
+    <!-- xutils3.0 示例-->
+    <string name="dependencies_xutils">dependencies/xutils/空白demo</string>
+    <string name="dependencies_xutils_download">dependencies/xutils/download(多线程下载示例)</string>
+
     <string name="dependencies_butterknifer">dependencies/butterknifer</string>
-    <string name="dependencies_magica_sakura">dependencies/magicaSakura(多主题框架)</string>
+    <string name="dependencies_magica_sakura">dependencies/magicaSakura(多主题框架示例)</string>
     <string name="views_custom_dialog">views/dialog/CustomDialog</string>
 
 
     <string name="cancel">cancel</string>
     <string name="confirm">ok</string>
+
+    <string name="remove">移除</string>
+    <string name="stop">停止</string>
+    <string name="start">开始下载</string>
+    <string name="test_download_url">http://dl.bintray.com/wyouflf/maven/org/xutils/xutils/3.5.0/xutils-3.5.0.aar</string>
 
 </resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hua.demos.dependencies.xutils.XUtilsDownloadActivity">
+
+
+    <TextView
+        style="@style/AppTheme.Button.Green"
+        android:gravity="center"
+        android:text="下载示例" />
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/test_download_url" />
+
+    <TextView
+        android:id="@+id/tv_down"
+        android:text="开始下载"
+        android:gravity="center"
+        style="@style/AppTheme.Button.Green"/>
+
+    <TextView
+        android:id="@+id/tv_down_list"
+        android:text="进入下载管理界面"
+        android:gravity="center"
+        style="@style/AppTheme.Button.Green" />
+
+</LinearLayout>

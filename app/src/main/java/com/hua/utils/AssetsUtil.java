@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hua.common.HuaApplication;
+import com.litesuits.common.io.IOUtils;
+import com.litesuits.common.io.StringCodingUtils;
 
 /**
  * Created by Administrator on 2017/4/9.
@@ -72,6 +74,20 @@ public class AssetsUtil {
             e.printStackTrace();
         }
         return files;
+    }
+
+
+
+    public static String readFile(String fileName){
+        AssetManager assets = getAssets();
+        String s = null;
+        try {
+            InputStream inputStream = assets.open(fileName);
+             s = IOUtils.toString(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return s;
     }
 
     private static AssetManager getAssets() {

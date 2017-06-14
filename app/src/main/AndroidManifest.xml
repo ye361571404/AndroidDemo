@@ -77,6 +77,7 @@
             android:label="@string/views_textview">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
@@ -85,18 +86,21 @@
             android:label="@string/views_button">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".demos.views.DialogActivity" android:label="@string/views_custom_dialog">
+        <activity
+            android:name=".demos.views.DialogActivity"
+            android:label="@string/views_custom_dialog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
-        <activity android:name=".demos.views.WebViewActivity"
+        <activity
+            android:name=".demos.views.WebViewActivity"
             android:label="@string/views_webview">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -118,17 +122,35 @@
             android:label="@string/dependencies_butterknifer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
 
-
         <!-- 动态改变主题颜色 -->
-        <activity android:name=".demos.dependencies.magica.MagicaSakuraActivity"
+        <activity
+            android:name=".demos.dependencies.magica.MagicaSakuraActivity"
             android:label="@string/dependencies_magica_sakura"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demos.views.WebViewActivity2"
+            android:label="@string/views_webview2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".demos.views.ExpandableListViewActivity" android:label="@string/views_listView_expandableListView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>

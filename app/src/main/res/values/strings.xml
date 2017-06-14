@@ -12,7 +12,9 @@
 
     <string name="views_textview">views/textview</string>
     <string name="views_button">views/button</string>
-    <string name="views_webview">views/WebView</string>
+    <string name="views_webview">views/WebView/webView1</string>
+    <string name="views_webview2">views/WebView/WebView2(加载html字符串)</string>
+    <string name="views_listView_expandableListView">views/ListView/ExpandableListView</string>
 
 
     <string name="dependencies_xutils">dependencies/xutils</string>

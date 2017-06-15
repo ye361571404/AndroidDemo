@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hua.demos.feature.openfile.OpenFileActivity">
+
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:text="打开text文件"
+        style="@style/AppTheme.Button.Green" />
+
+    <TextView
+        android:id="@+id/tv_pdf"
+        android:text="打开pdf文件"
+        style="@style/AppTheme.Button.Green" />
+
+    <TextView
+        android:id="@+id/tv_office"
+        android:text="打开office文件"
+        style="@style/AppTheme.Button.Green" />
+
+    <TextView
+        android:id="@+id/tv_img"
+        android:text="打开图片文件"
+        style="@style/AppTheme.Button.Green" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+
+</LinearLayout>

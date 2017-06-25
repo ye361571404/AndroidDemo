@@ -1,5 +1,6 @@
 package com.hua.demos.views;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -10,25 +11,23 @@ import android.widget.ProgressBar;
 
 import com.hua.R;
 import com.hua.main.activity.BaseActivity;
+import com.hua.utils.AssetsUtil;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-public class WebViewActivity extends BaseActivity {
+public class WebViewActivity3  extends BaseActivity {
 
 
-    @BindView(R.id.myProgressBar)
-    ProgressBar bar;
-    @BindView(R.id.webview)
-    WebView webview;
+    private ProgressBar bar;
+    private WebView webView;
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.activity_web_view;
+        return R.layout.activity_web_view3;
     }
 
     @Override
     protected void assignViews() {
+        bar = (ProgressBar) findViewById(R.id.myProgressBar);
+        webView = (WebView)findViewById(R.id.webview);
 
     }
 
@@ -43,7 +42,7 @@ public class WebViewActivity extends BaseActivity {
     }
 
     private void initWebView() {
-        WebSettings webSettings = webview.getSettings();
+        WebSettings webSettings = webView.getSettings();
         //设置支持javaScript脚步语言
         webSettings.setJavaScriptEnabled(true);
 
@@ -54,7 +53,7 @@ public class WebViewActivity extends BaseActivity {
         webSettings.setBuiltInZoomControls(true);
 
         //设置客户端-不跳转到默认浏览器中
-        webview.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new WebViewClient());
 
         //设置支持js调用java
         // wvContent.addJavascriptInterface(new AndroidAndJSInterface(),"Android");
@@ -62,13 +61,11 @@ public class WebViewActivity extends BaseActivity {
 
         //加载网络资源
 //        wvContent.loadUrl("http://10.0.2.2:8080/assets/JavaAndJavaScriptCall.html");
-        webview.loadUrl("file:///android_asset/table.htm");
-        // webview.loadUrl("https://www.baidu.com/");
-        // webview.loadUrl("http://www.stats.gov.cn/");
-        // webview.loadUrl("http://tjj.daqing.gov.cn/gzdt/24224.htm");
+        // webView.loadUrl("file:///android_asset/table.htm");
+        webView.loadUrl("file:///mnt/sdcard/table.htm");
 
 
-        webview.setWebChromeClient(new WebChromeClient() {
+        webView.setWebChromeClient(new WebChromeClient() {
 
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
@@ -86,5 +83,6 @@ public class WebViewActivity extends BaseActivity {
         });
 
     }
+
 
 }

@@ -20,8 +20,13 @@
         style="@style/AppTheme.Button.Green" />
 
     <TextView
-        android:id="@+id/tv_office"
-        android:text="打开office文件"
+        android:id="@+id/tv_word"
+        android:text="打开word文件"
+        style="@style/AppTheme.Button.Green" />
+
+    <TextView
+        android:id="@+id/tv_excel"
+        android:text="打开excel文件"
         style="@style/AppTheme.Button.Green" />
 
     <TextView

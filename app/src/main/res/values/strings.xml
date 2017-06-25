@@ -14,6 +14,7 @@
     <string name="views_button">views/button</string>
     <string name="views_webview">views/WebView/webView1</string>
     <string name="views_webview2">views/WebView/WebView2(加载html字符串)</string>
+    <string name="views_webview3">views/WebView/WebView3(加载html文件)</string>
     <string name="views_listView_expandableListView">views/ListView/ExpandableListView</string>
 
 

@@ -31,7 +31,9 @@ public class WebViewActivity2 extends BaseActivity {
     protected void initData() {
         // String data = AssetsUtil.readFile("html1.txt");
         // String data = AssetsUtil.readFile("html2.txt");
-        String data = AssetsUtil.readFile("html3.txt");
+        // String data = AssetsUtil.readFile("html3.txt");
+        String data = AssetsUtil.readFile("table.htm");
+
         webView.loadDataWithBaseURL(null,data,"text/html", "utf-8", null);
     }
 }

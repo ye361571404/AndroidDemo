@@ -23,9 +23,10 @@ public class OpenFileActivity extends AppCompatActivity implements View.OnClickL
 
     private TextView tvText;
     private TextView tvPdf;
-    private TextView tvOffice;
+    private TextView tvWord;
     private TextView tvImg;
     private WebView webView;
+    private TextView tvExcel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,8 @@ public class OpenFileActivity extends AppCompatActivity implements View.OnClickL
     private void assignViews() {
         tvText = (TextView) findViewById(R.id.tv_text);
         tvPdf = (TextView) findViewById(R.id.tv_pdf);
-        tvOffice = (TextView) findViewById(R.id.tv_office);
+        tvWord = (TextView) findViewById(R.id.tv_word);
+        tvExcel = (TextView) findViewById(R.id.tv_excel);
         tvImg = (TextView) findViewById(R.id.tv_img);
         webView = (WebView) findViewById(R.id.webview);
     }
@@ -53,7 +55,8 @@ public class OpenFileActivity extends AppCompatActivity implements View.OnClickL
     private void setListener() {
         tvText.setOnClickListener(this);
         tvPdf.setOnClickListener(this);
-        tvOffice.setOnClickListener(this);
+        tvWord.setOnClickListener(this);
+        tvExcel.setOnClickListener(this);
         tvImg.setOnClickListener(this);
     }
 
@@ -68,8 +71,11 @@ public class OpenFileActivity extends AppCompatActivity implements View.OnClickL
             case R.id.tv_pdf:
 
                 break;
-            case R.id.tv_office:
+            case R.id.tv_word:
                 file = StorageUtil.getAppCustomCacheDirectory(Constants.APP_CACHE_DIR_FILES + File.separator + "001.doc");
+                break;
+            case R.id.tv_excel:
+                file = StorageUtil.getAppCustomCacheDirectory(Constants.APP_CACHE_DIR_FILES + File.separator + "001.xlsx");
                 break;
             case R.id.tv_img:
 

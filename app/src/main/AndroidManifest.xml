@@ -75,6 +75,7 @@
         <activity android:name=".demos.activity.ExerciseDemoActivity" />
         <activity android:name=".demos.activity.ExerciseDemo3_2Activity" />
         <activity android:name=".demos.activity.ExerciseDemo3_4Activity" />
+        <activity android:name=".demos.activity.ExerciseDemo3_6Activity" />
 
 
         <!-- 以下为Demos -->

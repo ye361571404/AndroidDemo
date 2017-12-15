@@ -74,6 +74,7 @@
         <!-- 以下是Android 从入门到精通 demo -->
         <activity android:name=".demos.activity.ExerciseDemoActivity" />
         <activity android:name=".demos.activity.ExerciseDemo3_2Activity" />
+        <activity android:name=".demos.activity.ExerciseDemo3_4Activity" />
 
 
         <!-- 以下为Demos -->

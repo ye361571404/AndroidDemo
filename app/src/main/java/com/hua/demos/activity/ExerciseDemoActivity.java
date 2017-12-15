@@ -27,6 +27,7 @@ public class ExerciseDemoActivity extends BaseActivity implements View.OnClickLi
 
     private ExerciseBean[] exercises = new ExerciseBean[]{
             new ExerciseBean("3.2 通过代码实现游戏的进入界面",ExerciseDemo3_2Activity.class),
+            new ExerciseBean("3.4 自定义View组件实现跟随手指的兔子",ExerciseDemo3_4Activity.class)
     };
 
     @Override

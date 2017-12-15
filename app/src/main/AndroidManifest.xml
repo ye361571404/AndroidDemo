@@ -9,7 +9,7 @@
     <application
         android:name=".common.HuaApplication"
         android:allowBackup="true"
-        android:icon="@drawable/logo2"
+        android:icon="@drawable/xin"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -70,6 +70,11 @@
         <activity android:name=".feature.sharedpreferences.activity.SharedPreferencesActivity" />
         <activity android:name=".feature.proguard.activity.ProguardActivity" />
         <activity android:name=".demos.DemosActivity" />
+
+        <!-- 以下是Android 从入门到精通 demo -->
+        <activity android:name=".demos.activity.ExerciseDemoActivity" />
+        <activity android:name=".demos.activity.ExerciseDemo3_2Activity" />
+
 
         <!-- 以下为Demos -->
         <activity
@@ -193,6 +198,11 @@
                 <category android:name="android.intent.category.MY_SAMPLE_CODE" />
             </intent-filter>
         </activity>
+
+
+
+
+
     </application>
 
 </manifest>

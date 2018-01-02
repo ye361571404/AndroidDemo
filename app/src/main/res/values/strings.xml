@@ -38,4 +38,12 @@
     <string name="start">开始下载</string>
     <string name="test_download_url">http://dl.bintray.com/wyouflf/maven/org/xutils/xutils/3.5.0/xutils-3.5.0.aar</string>
 
+
+    <string-array name="entries">
+        <item>军人</item>
+        <item>老师</item>
+        <item>学生</item>
+        <item>医生</item>
+    </string-array>
+
 </resources>

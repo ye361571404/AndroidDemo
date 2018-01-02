@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--
+    android:collapseColumns:设置需要被隐藏的列的列序号(序号从零开始),多个序号之间用都好分割
+    android:shrinkColumns:设置需允许被收缩的列的列序号(序号从零开始),多个序号之间用都好分割
+    android:stretchColumns:设置允许被拉伸的列的列序号(序号从零开始),多个序号之间用都好分割
+    -->
+
 
     <!-- 第一行 -->
     <TableRow

@@ -31,7 +31,8 @@ public class ExerciseDemoActivity extends BaseActivity implements View.OnClickLi
             new ExerciseBean("3.6 用表格布局实现登录界面",ExerciseDemo3_6Activity.class),
             new ExerciseBean("3.14 单选按钮demo",ExerciseDemo3_14Activity.class),
             new ExerciseBean("3.17 列表选择框demo",ExerciseDemo3_17Activity.class),
-            new ExerciseBean("3.18 ListView列表控件demo",ExerciseDemo3_18Activity.class)
+            new ExerciseBean("3.18 ListView列表控件demo",ExerciseDemo3_18Activity.class),
+            new ExerciseBean("3.21 日期/时间拾取器demo",ExerciseDemo3_21Activity.class)
     };
 
     @Override

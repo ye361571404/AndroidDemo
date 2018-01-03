@@ -34,7 +34,8 @@ public class ExerciseDemoActivity extends BaseActivity implements View.OnClickLi
             new ExerciseBean("3.18 ListView列表控件demo",ExerciseDemo3_18Activity.class),
             new ExerciseBean("3.21 日期/时间拾取器demo",ExerciseDemo3_21Activity.class),
             new ExerciseBean("3.22 计时器demo",ExerciseDemo3_22Activity.class),
-            new ExerciseBean("3.23 实现跟踪鼠标单击状态的图片按钮demo",ExerciseDemo3_23Activity.class)
+            new ExerciseBean("3.23 实现跟踪鼠标单击状态的图片按钮demo",ExerciseDemo3_23Activity.class),
+            new ExerciseBean("3.24 实现带图标的ListView",ExerciseDemo3_24Activity.class)
     };
 
     @Override

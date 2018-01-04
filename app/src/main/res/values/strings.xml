@@ -39,6 +39,7 @@
     <string name="test_download_url">http://dl.bintray.com/wyouflf/maven/org/xutils/xutils/3.5.0/xutils-3.5.0.aar</string>
     <string name="artcle"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;温馨提示：本游戏适合各年龄段的玩家，请您合理安排游戏时间，不要沉迷游戏！
     当您连续在线2小时间后，系统将自动结束游戏。如果同意该条款请勾选“我同意”复选框，方可进入游戏。</string>
+    <string name="title">猜猜鸡蛋在哪只鞋子里?</string>
 
 
     <string-array name="entries">

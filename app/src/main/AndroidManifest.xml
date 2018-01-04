@@ -83,6 +83,7 @@
         <activity android:name=".demos.activity.ExerciseDemo3_22Activity" />
         <activity android:name=".demos.activity.ExerciseDemo3_23Activity" />
         <activity android:name=".demos.activity.ExerciseDemo3_24Activity" />
+        <activity android:name=".demos.activity.ExerciseDemo3_25Activity" />
 
 
         <!-- 以下为Demos -->

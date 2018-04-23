@@ -8,6 +8,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,14 +22,6 @@ import android.widget.Toast;
 
 import com.blankj.utilcode.utils.FileUtils;
 import com.blankj.utilcode.utils.ToastUtils;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import com.hua.R;
 import com.hua.feature.player.adapter.MusicAdapter;
 import com.hua.feature.player.model.AudioDecorator;
@@ -42,6 +35,14 @@ import com.hua.feature.player.present.MusicPresentImpl;
 import com.hua.feature.player.utils.FileUtil;
 import com.hua.feature.player.utils.PreferenceManager;
 import com.hua.feature.player.utils.TimeUtils;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * 音乐播放器
@@ -57,6 +58,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
 
 
     private static final long UPDATE_PROGRESS_INTERVAL = 1000;
+    private static final int MMM = 0;
+    private static final int MMM1 = 1;
 
     @BindView(R.id.rv_content)
     RecyclerView rvContent;
@@ -92,6 +95,8 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
     private IPlayback mPlayer;
     private PlayList<Song> playList;
     private MusicAdapter mAdapter;
+    // private DefaultRationale mRationale;
+    private PermissionSetting mSetting;
 
     private Handler mHandler = new Handler();
 
@@ -161,11 +166,15 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
 
 
     private void initData() {
+        // reqest();
+        /*mRationale = new DefaultRationale();
+        mSetting = new PermissionSetting(this);
         playList = new PlayList();
         List<AudioDecorator<Song>> songs = new ArrayList<>();
         AudioDecorator<Song> audioDecorator;
         Song song;
 
+        requestPermission(Permission.Group.STORAGE);*/
         // File appRoot = FileUtil.getAppRoot();
         // 方法一
         /*File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
@@ -182,17 +191,14 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
 
         // 方法二
         // 获取 /storage/emulated/0/Music 目录下的音乐(添加读取SD卡权限)
-        File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
+        File directory = Environment.getExternalStoragePublicDirectory("Music");
         List<File> files = FileUtils.listFilesInDir(directory);
         for (File file : files) {
-            song = FileUtil.fileToMusic(file);
+            /*song = FileUtil.fileToMusic(file);
             audioDecorator = new AudioDecorator<Song>(song);
-            songs.add(audioDecorator);
+            songs.add(audioDecorator);*/
         }
-
-
-        playList.setSongs(songs);
-
+        // playList.setSongs(songs);
         rvContent.setLayoutManager(new LinearLayoutManager(mContext));
         mAdapter = new MusicAdapter(this,playList);
         rvContent.setAdapter(mAdapter);
@@ -200,6 +206,60 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
         // 绑定服务
         new MusicPresentImpl(mContext, this).subscribe();
     }
+
+    private void requestPermission(String... permissions) {
+        /*AndPermission.with(this)
+                .permission(permissions)
+                .rationale(mRationale)
+                .onGranted(new Action() {
+                    @Override
+                    public void onAction(List<String> permissions) {
+                        toast(R.string.successfully);
+                    }
+                })
+                .onDenied(new Action() {
+                    @Override
+                    public void onAction(@NonNull List<String> permissions) {
+                        toast(R.string.failure);
+                        if (AndPermission.hasAlwaysDeniedPermission(MusicPlayerActivity.this, permissions)) {
+                            mSetting.showSetting(permissions);
+                        }
+                    }
+                })
+                .start();*/
+    }
+
+    protected void toast(@StringRes int message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    /*    private void reqest() {
+        // 1.检查该权限是否已授权
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            // 没有权限。
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                // 用户拒绝过这个权限了，应该提示用户，为什么需要这个权限。
+            } else {
+                // 申请授权,权限组
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, MMM);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MMM: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // 权限被用户同意，可以去放肆了。
+                } else {
+                    // 权限被用户拒绝了，洗洗睡吧。
+                }
+                return;
+            }
+        }
+    }*/
 
 
     // Click Events

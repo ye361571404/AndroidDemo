@@ -182,9 +182,43 @@
             </intent-filter>
         </activity>
         <activity android:name=".demos.dependencies.xutils.DownloadActivity" />
+        <activity android:name=".feature.drawer.DrawerActivity"
+            android:label="@string/feature_drawer">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".feature.desgin.DesginActivity"
+            android:label="@string/dependencies_immersionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".demos.feature.openfile.OpenFileActivity"
             android:label="@string/feature_openfile">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demos.dependencies.retrofit.RetrofitActivity"
+            android:label="@string/dependencies_retrofit">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demos.dependencies.rxjava.RxJavaActivity"
+            android:label="@string/dependencies_rxjava">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

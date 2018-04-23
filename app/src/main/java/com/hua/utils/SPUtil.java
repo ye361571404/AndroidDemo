@@ -139,7 +139,7 @@ public class SPUtil {
         return false;
     }
 
-    public static void setStringset(int type, String key, Set<String> set){
+    public static void setStringSet(int type, String key, Set<String> set){
         SharedPreferences.Editor editor = getPreferences(type).edit();
         editor.putStringSet(key,set);
         editor.commit();

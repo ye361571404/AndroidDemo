@@ -24,10 +24,16 @@
 
     <string name="dependencies_butterknifer">dependencies/butterknifer</string>
     <string name="dependencies_magica_sakura">dependencies/magicaSakura(多主题框架示例)</string>
+    <string name="dependencies_immersionbar">dependencies/immersionbar(沉浸式实现)</string>
+    <string name="dependencies_retrofit">dependencies/retrofit2.0</string>
+    <string name="dependencies_rxjava">dependencies/RXjava</string>
+
+
     <string name="views_custom_dialog">views/dialog/CustomDialog</string>
 
 
     <string name="feature_openfile">feature/openfile(调用系统其他app打开文件)</string>
+    <string name="feature_drawer">feature/DrawerLayout实现侧拉栏</string>
 
 
     <string name="cancel">cancel</string>

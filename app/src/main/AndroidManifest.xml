@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hua">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -219,6 +220,15 @@
         <activity
             android:name=".demos.dependencies.rxjava.RxJavaActivity"
             android:label="@string/dependencies_rxjava">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.MY_SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demos.dependencies.okhttp.OkHttpActivity"
+            android:label="@string/dependencies_okhttp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

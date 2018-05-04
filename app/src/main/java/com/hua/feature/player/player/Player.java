@@ -227,12 +227,15 @@ public class Player implements IPlayback, MediaPlayer.OnCompletionListener {
         AudioDecorator next = null;
         // There is only one limited play mode which is list, player should be stopped when hitting the list end
         if (mPlayList.getPlayMode() == PlayMode.LIST && mPlayList.getPlayingIndex() == mPlayList.getNumOfSongs() - 1) {
+            // 如果是列表播放模式,并且已经是最后一首,则不再进行任何操作
             // In the end of the list
             // Do nothing, just deliver the callback
         } else if (mPlayList.getPlayMode() == PlayMode.SINGLE) {
+            // 单曲循环
             next = mPlayList.getCurrentSong();
             play();
         } else {
+            // 列表顺序播放
             boolean hasNext = mPlayList.hasNext(true);
             if (hasNext) {
                 next = mPlayList.next();

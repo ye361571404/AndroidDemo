@@ -58,6 +58,9 @@ public interface IPlayback {
 
     void releasePlayer();
 
+    /**
+     * 播放状态更新回调
+     */
     interface Callback {
 
         /**

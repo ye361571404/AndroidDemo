@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.blankj.utilcode.utils.FileUtils;
 import com.blankj.utilcode.utils.ToastUtils;
 import com.hua.R;
+import com.hua.demos.dependencies.permission.DefaultRationale;
 import com.hua.feature.player.adapter.MusicAdapter;
 import com.hua.feature.player.model.AudioDecorator;
 import com.hua.feature.player.model.PlayList;
@@ -35,6 +36,10 @@ import com.hua.feature.player.present.MusicPresentImpl;
 import com.hua.feature.player.utils.FileUtil;
 import com.hua.feature.player.utils.PreferenceManager;
 import com.hua.feature.player.utils.TimeUtils;
+import com.yanzhenjie.permission.Action;
+import com.yanzhenjie.permission.AndPermission;
+import com.yanzhenjie.permission.Permission;
+import com.yanzhenjie.permission.Rationale;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -95,7 +100,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
     private IPlayback mPlayer;
     private PlayList<Song> playList;
     private MusicAdapter mAdapter;
-    // private DefaultRationale mRationale;
+    private Rationale mRationale;
     private PermissionSetting mSetting;
 
     private Handler mHandler = new Handler();
@@ -167,14 +172,14 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
 
     private void initData() {
         // reqest();
-        /*mRationale = new DefaultRationale();
+        mRationale = new DefaultRationale();
         mSetting = new PermissionSetting(this);
         playList = new PlayList();
         List<AudioDecorator<Song>> songs = new ArrayList<>();
         AudioDecorator<Song> audioDecorator;
         Song song;
 
-        requestPermission(Permission.Group.STORAGE);*/
+        requestPermission(Permission.Group.STORAGE);
         // File appRoot = FileUtil.getAppRoot();
         // 方法一
         /*File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
@@ -194,11 +199,11 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
         File directory = Environment.getExternalStoragePublicDirectory("Music");
         List<File> files = FileUtils.listFilesInDir(directory);
         for (File file : files) {
-            /*song = FileUtil.fileToMusic(file);
+            song = FileUtil.fileToMusic(file);
             audioDecorator = new AudioDecorator<Song>(song);
-            songs.add(audioDecorator);*/
+            songs.add(audioDecorator);
         }
-        // playList.setSongs(songs);
+        playList.setSongs(songs);
         rvContent.setLayoutManager(new LinearLayoutManager(mContext));
         mAdapter = new MusicAdapter(this,playList);
         rvContent.setAdapter(mAdapter);
@@ -208,7 +213,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
     }
 
     private void requestPermission(String... permissions) {
-        /*AndPermission.with(this)
+        AndPermission.with(this)
                 .permission(permissions)
                 .rationale(mRationale)
                 .onGranted(new Action() {
@@ -226,7 +231,7 @@ public class MusicPlayerActivity extends AppCompatActivity implements MusicPlaye
                         }
                     }
                 })
-                .start();*/
+                .start();
     }
 
     protected void toast(@StringRes int message) {

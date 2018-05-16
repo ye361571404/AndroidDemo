@@ -34,6 +34,10 @@ public class ReadMe {
      *    PlaybackService 实现 IPlayback.Callback 接口,并添加到Player中的mCallbacks集合,
      *    当播放状态改变时,调用实现状态回调接口的实现类相关方法
      *
+     *    注意:要在清单文件注册该服务
+     *    注意:要在清单文件注册该服务
+     *    注意:要在清单文件注册该服务
+     *
      * 5.MusicPlayerActivity 实现 IPlayback.Callback 接口,
      *    并添加到Player中的mCallbacks集合,当播放状态改变时,调用实现状态回调接口的实现类相关方法
      *
